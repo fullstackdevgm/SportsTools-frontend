@@ -1,0 +1,43 @@
+<div class="dlg-container">
+	<h1 class="title">{{ title }}</h1>
+	<button class="toggle-desc"><span class="fa fa-question-circle"></span></button>
+	<div class="description">
+	</div>
+	<div class="content">
+		<comp-sports [isAdaptive] = "false"></comp-sports>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<button type="button" class="btn btn-block" [disabled] = "ifCreate"><i class="fa fa-plus" aria-hidden="true"></i>Add Sports</button>
+			</div>
+		</div>
+		<comp-startend [where] = "indicator"></comp-startend>
+		<div class="row gutter-10">
+			<comp-date [where] = "'Registration'"></comp-date>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Registration End</label>
+					<input type="date" class="form-control" name=""/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Price</label>
+					<input type="text" class="form-control" name=""/>
+				</div>
+			</div>
+		</div>
+		<comp-name [where] = "indicator"></comp-name>
+		<comp-address [where] = "indicator" [show_other] = "show_other"></comp-address>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Owner</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<comp-cac [where] = "'a ' +indicator"></comp-cac>
+	</div>
+</div>

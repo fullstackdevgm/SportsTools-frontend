@@ -1,0 +1,172 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="content">
+    <div class="col-md-6 col-centered">
+        <h1 class="title">{{title}}</h1>
+        <div class="first-form">
+            <div class="row gutter-10">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Sports</label>
+                        <select class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+                            <option [value]="">{{emptyLabel}}</option>
+                            <option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Sub Sports</label>
+                        <select class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+                            <option [value]="">{{emptyLabel}}</option>
+                            <option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>League Type</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter-10">
+                <div class="col-md-3">
+                    <div class="form-group clearfix">
+                        <div class="col-xs-5 nopadding">
+                            <label>&nbsp;</label>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-7 nopadding">
+                            <label>Age Group</label>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group clearfix">
+                        <div class="col-xs-5 nopadding">
+                            <label>Sum</label>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-7 nopadding">
+                            <label>Gender</label>
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label>Organizational Record</label>
+                        <select class="form-control">
+                            <option>1</option>
+                            <option>2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="checkbox">
+                        <label><input type="checkbox" value=""/>Adaptive</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter-10 search-buttons">
+                <div class="col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-block">Find Field/Facility</button>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-block">Find Camp</button>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-block">Find Team</button>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <button type="button" class="btn btn-block">Find League</button>
+                </div>
+            </div>
+        </div>
+        <div class="result-form">
+            <div class="row gutter-10">
+                <div class="col-md-9">
+                    <div class="result-info">
+                        <p class="teams">There are <u>8 Soccer Teams</u><span> Looking</span> for Players in Denver </p>
+                        <p class="leagues">There are <u>2 Soccer Leagues</u><span> Looking</span> for Teams in Denver </p>
+                        <p class="tournaments">There are <u>12 Tournaments</u> for Players in Denver </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="second-form">
+            <div class="row gutter-10">
+                <div class="col-md-7">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Team Name to Find"/>
+                    </div>
+                </div>
+            </div>
+            <div class="row gutter-10 search-buttons">
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block">Team Summary</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block">League Summary</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block">Your Stats/History</button>
+                </div>
+                <div class="col-md-3">
+                    <button type="button" class="btn btn-block">Your Home Page</button>
+                </div>
+            </div>
+            <div class="row gutter-10 last-inputs">
+                <div class="col-md-6">
+                    <div class="form-group clearfix">
+                        <div class="col-xs-7 nopadding">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                        <div class="col-xs-5 nopadding">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group clearfix">
+                        <div class="col-xs-7 nopadding">
+                            <label for="sports">Your win/loss Record this</label>
+                        </div>
+                        <div class="col-xs-5 nopadding">
+                            <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="test-result">
+            {{ $sports }}
+        </div>
+    </div>
+</div>
+

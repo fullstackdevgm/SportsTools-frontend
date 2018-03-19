@@ -1,0 +1,133 @@
+<div class="dlg-container">
+	<h1 class="title">{{ title }}</h1>
+	<button class="toggle-desc"><span class="fa fa-question-circle"></span></button>
+	<div class="description">
+	</div>
+	<div class="content">
+		<comp-sports [isAdaptive]="false"></comp-sports>
+		<comp-name [where] = "indicator"></comp-name>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>
+						Allow Girls on Boys team
+						<input type="radio" name="team" value="yes"/>Yes
+						<input type="radio" name="team" value="no"/>No
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>
+						Girls can play 1 year up
+						<input type="radio" name="team" value="yes"/>Yes
+						<input type="radio" name="team" value="no"/>No
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>
+						Strict Age
+						<input type="radio" name="team" value="yes"/>Yes
+						<input type="radio" name="team" value="no"/>No
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-5">
+				<div class="form-group">
+					<label>Age Group</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-5">
+				<div class="form-group">
+					<label>Gender</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>League Type</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Max Teams</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Fee</label>
+					<input type="text" class="form-control" name=""/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Notes</label>
+					<div class="form-border"><textarea></textarea></div>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Owner</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<comp-date [where] = "'Tournament Start'"></comp-date>
+			<comp-date [where] = "'Tournament End'"></comp-date>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Tournament Type</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Minimum Games</label>
+					<input type="date" class="form-control" name=""/>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Team Length Restrictions</label>
+					<input type="date" class="form-control" name=""/>
+				</div>
+			</div>
+		</div>
+		<comp-cac [where] = "'a ' +indicator"></comp-cac>
+	</div>
+</div>

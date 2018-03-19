@@ -1,0 +1,109 @@
+/*
+CSS for all pages, dialogs and components
+*/
+.child-container, .dlg-container {
+	max-width: 1000px;
+	margin: 10px auto;
+	padding: 0 5px;
+}
+.child-container .title, .dlg-container .title {
+	font-size: 24px;
+	color: #666666;
+	font-weight: 700;
+	text-align: left;
+	border-bottom: 2px solid #999999;
+	line-height: 50px;
+}
+.child-container .return-home {
+	text-align: left;
+	color: #333333;
+	font-size: 12px;
+	display: block;
+}
+.child-container .create-form, .dlg-container .create-form {
+	padding: 20px 10%;
+	border: 1px solid #999;
+	border-radius: 5px;
+	margin: 5px;
+}
+.child-container .form-group, .dlg-container .form-group {
+	margin-right: 0; 
+}
+.child-container .form-group label, .dlg-container .form-group label {
+	color: #666666;
+}
+.child-container .form-group textarea, .dlg-container .form-group textarea {
+	width: 100%;
+}
+.child-container .form-border > textarea, .dlg-container .form-border > textarea {
+	display: block;
+}
+.child-container .form-border-line input, .dlg-container .form-border-line input {
+	height: 44px;
+}
+.child-container .create-form button, .dlg-container .create-form button {
+	line-height: 40px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.dlg-container {
+	margin: 0;
+	padding: 0;
+	position: relative;
+}
+.content .row {
+	margin-bottom: 10px;
+}
+.dlg-container .title {
+	width: 375px;
+}
+.dlg-container .content, .dlg-container .description {
+	width: 355px;
+	padding-right: 20px;
+}
+.dlg-container .title {
+	margin-top: 0px;
+	font-weight: 400;
+	text-align: center;
+	border: none;
+	line-height: 1.1;
+}
+.dlg-container .toggle-desc {
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	color: #999999;
+	font-size: 24px;
+}
+.dlg-container .toggle-desc:hover {
+	color: #d7d7d7;
+}
+.dlg-container .toggle-desc:focus {
+	outline: none;
+}
+.dlg-container .description {
+	display: none;
+}
+.dlg-container .content {
+	max-height: 50vh;
+	overflow-y: overlay;
+	overflow-x: hidden;
+}
+.dlg-container .form-group, .dlg-container .form-group label {
+	margin-bottom: 0;
+}
+.form-text {
+	line-height: 34px;
+	font-weight: 700;
+	color: #666666;
+}
+@media (max-width: 530px) {
+	.dlg-container .title {
+		width: 200px;
+	}
+	.dlg-container .content, .dlg-container .description {
+		width: 180px;
+	}
+}

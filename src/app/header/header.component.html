@@ -1,0 +1,58 @@
+<div class="header">
+	<button md-icon-button [mdMenuTriggerFor]="menu" class="toggle">
+		<span class="fa fa-bars"></span>
+		<span class="fa fa-angle-right"></span>
+		<span>SportsTools</span>
+	</button>
+	<md-menu #menu="mdMenu">
+		<div class="first-item">
+			<div class="logo"><img class="logo-picture" src="./assets/logo.PNG" alt="Logo"/></div>
+			<div class="close"><span class="fa fa-times"></span></div>
+		</div>
+		<a [routerLink]="['/organization']" md-menu-item class="view-item">
+			<span>Organization</span>
+		</a>
+		<a [routerLink]="['/club']" md-menu-item class="view-item">
+			<span>Club</span>
+		</a>
+		<a [routerLink]="['/player']" md-menu-item class="view-item">
+			<span>Player</span>
+		</a>
+		<a [routerLink]="['/sport']" md-menu-item class="view-item">
+			<span>Sport</span>
+		</a>
+		<a md-menu-item (click)="openCreateTeamDialog()" class="create-item">
+			<span>Create a Team</span>
+		</a>
+		<a md-menu-item (click)="openCreateLeagueDialog()" class="create-item">
+			<span>Create a League Schedule</span>
+		</a>
+		<a md-menu-item (click)="openCreateOrganizationDialog()" class="create-item">
+			<span>Create an Organization</span>
+		</a>
+		<a md-menu-item (click)="openCreateSubOrganizationDialog()" class="create-item sub-item">
+			<span>Create a Suborganization</span>
+		</a>
+		<a md-menu-item (click)="openCreateClubDialog()" class="create-item">
+			<span>Create a Club</span>
+		</a>
+		<a md-menu-item (click)="openCreateFacilityDialog()" class="create-item">
+			<span>Create a Facility</span>
+		</a>
+		<a md-menu-item (click)="openCreateSubFacilityDialog()" class="create-item sub-item">
+			<span>Create a Sub Facility</span>
+		</a>
+		<a md-menu-item (click)="openCreateUserDialog()" class="create-item">
+			<span>Create a User</span>
+		</a>
+		<a md-menu-item (click)="openCreateTournamentDialog()" class="create-item">
+			<span>Create a Tournament</span>
+		</a>
+		<a md-menu-item (click)="openCreateCampDialog()" class="create-item">
+			<span>Create a Camp</span>
+		</a>
+	</md-menu>
+	<a href="#" class="share-links links pull-right">
+		<div class="share-toggle"><span class="fa fa-volume-up"></span></div>
+	</a>
+</div>

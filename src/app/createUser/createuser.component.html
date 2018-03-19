@@ -1,0 +1,178 @@
+<div class="dlg-container">
+	<h1 class="title">{{ title }}</h1>
+	<button class="toggle-desc"><span class="fa fa-question-circle"></span></button>
+	<div class="description">
+	</div>
+	<div class="content">
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Role</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<comp-name [where] = "'First'"></comp-name>
+		<comp-name [where] = "'Last'"></comp-name>
+		<comp-name [where] = "'Nick'"></comp-name>
+		<comp-address [where] = "indicator" [show_other] = "show_other"></comp-address>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Citizen of what Country?</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label>Gender</label>
+					<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label>Birthday</label>
+					<input type="date" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<span>Age Calculated</span> / <span>School Calculated</span>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Email</label>
+					<input type="email" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Social Contact Info</label>
+					<input type="url" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Password</label>
+					<input type="password" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Check Password</label>
+					<input type="password" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Phone for TXT alerts</label>
+					<input type="tel" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Phone for TXT alerts</label>
+					<input type="tel" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label><input type="checkbox" value=""/>Notifications</label>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label><input type="checkbox" value=""/>TXT alerts</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-3">
+				<div class="form-group">
+					<label><input type="checkbox" value=""/>Adaptive</label>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<select type="number" class="form-control" [disabled]="true" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+						<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Special Needs</label>
+					<div class="form-border"><textarea></textarea></div>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Documents</label>
+					<input type="file" id="myFile"/>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Actual Age</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<comp-name [where] = "'Catenated'"></comp-name>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>
+						Looking for teams?
+						<input type="radio" name="team" value="yes"/>Yes
+						<input type="radio" name="team" value="no"/>No
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>
+						Looking for tournaments?
+						<input type="radio" name="tour" value="yes"/>Yes
+						<input type="radio" name="tour" value="no"/>No
+					</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-3">
+				<div class="form-group">
+					<label><input type="checkbox" value=""/>Agree to Terms</label>
+				</div>
+			</div>
+		</div>
+		<comp-cac [where] = "'a ' +indicator"></comp-cac>
+	</div>
+</div>

@@ -1,0 +1,29 @@
+<div class="dlg-container">
+	<h1 class="title">{{ title }}</h1>
+	<button class="toggle-desc"><span class="fa fa-question-circle"></span></button>
+	<div class="description">
+	</div>
+	<div class="content">
+		<comp-sports [isAdaptive] = "false"></comp-sports>
+		<div class="row gutter-10">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Number of teams</label>
+					<input type="number" class="form-control" value="2" />
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-md-12">
+				<div class="form-group">
+					<label>Type of schedule</label>
+					<select type="number" class="form-control" [(ngModel)]="selType" (ngModelChange)="getType($event)">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let type of typeSchedules" [value]="type.value">{{type.name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<comp-cac [where] = "'a ' + indicator" [ifClose] = "false"></comp-cac>
+	</div>
+</div>

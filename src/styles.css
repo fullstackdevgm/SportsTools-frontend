@@ -1,0 +1,176 @@
+/*
+CSS for all
+*/
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+body {
+	font-family: "Roboto";
+}
+.gutter-10.row {
+	margin-right: -5px;
+	margin-left: -5px;
+}
+.form-border {
+	padding: 3px;
+	border: 1px solid #999999;
+	border-radius: 5px;
+}
+.gutter-10 [class^="col-"], .gutter-10 [class^=" col-"] {
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.nopadding {
+	padding: 0 !important;
+}
+.nopaddingleft {
+	padding-left: 0 !important;
+}
+.nopaddingright {
+	padding-right: 0px !important;
+}
+@media (min-width: 993px) {
+	.nopadding-md {
+		padding: 0 !important;
+	}
+	.nopaddingleft-md {
+		padding-left: 0 !important;
+	}
+	.nopaddingright-md {
+		padding-right: 0px !important;
+	}
+}
+/* centered columns styles */
+.row-centered {
+	text-align:center;
+}
+.col-centered {
+	margin: 0 auto;
+	float:none;
+	/* reset the text-align */
+	text-align:left;
+}
+
+.footer {
+	background: #434343;
+	color: #fff;
+	margin-top: 40px;
+}
+.footer .text {
+	font-size: 16px;
+	padding: 14px;
+	line-height: 19px;
+}
+.title {
+	font-size: 28px;
+	color: #1E1E1E;
+}
+.note .fa-bars {
+	cursor: pointer;
+	background: #138CDD;
+	color: #ffffff;
+	line-height: 13px;
+	padding: 0 2px;
+	font-size: 11px;
+}
+.note .description {
+	display: none;
+	border: 1px solid #8f949a;
+	background: #ffffff;
+}
+.note .des-head {
+	background: #8f949a;
+	color: #ffffff;
+	line-height: 22px;
+	padding: .3em .3em .1em .8em;
+}
+.note .des-head .fa-times {
+	cursor: pointer;
+	color: #222222;
+	line-height: 22px;
+}
+.note .des-content {
+	padding: .5em .2em;
+}
+.note {
+	font-size: 12px;
+	position: absolute;
+	top: 20px;
+	right: -7px;
+}
+.note .fa-bars {
+	-moz-box-shadow: 1px 1px 3px #aaa;
+	-webkit-box-shadow: 1px 1px 3px #aaa;
+	box-shadow: 1px 1px 3px #aaa;
+}
+.note strong {
+	font-size: 14px;
+}
+.form-group {
+	margin-right: 15px;
+	position: relative;
+}
+.form-group label {
+	font-size: 13px;
+	font-weight: 400;
+	white-space: nowrap;
+}
+.form-group > div:first-child {
+	padding-right: 5px !important;
+}
+.checkbox {
+	margin: 40px 0 0 0;
+}
+.checkbox label {
+	font-size: 13px;
+}
+.btn-block {
+	font-size: 13px;
+}
+.btn.btn-block {
+	color: #fff;
+	background: #747474;
+}
+.btn.btn-block:hover {
+	background: #515151;
+}
+.content .row {
+	margin-bottom: 15px;
+}
+.result-info {
+	border: 1px solid #333333;
+	color: #333333;
+	padding: 10px;
+	font-size: 14px;
+}
+.result-info p:last-child {
+	margin-bottom: 0;
+}
+.result-info u {
+	color:#535353;
+}
+.result-info span {
+	color:#535353;
+}
+.search-buttons div {
+	margin-bottom: 10px;
+}
+.second-form .note {
+	top: -7px;
+}
+.last-inputs label {
+	line-height: 30px;
+}
+.last-inputs .note {
+	right: 0px;
+}
+.mat-menu-content {
+	background: #e4e4e4 !important;
+}
+.mat-menu-panel {
+	max-width: 300px !important;
+}
+.mat-dialog-container {
+	margin: 0 auto;
+}

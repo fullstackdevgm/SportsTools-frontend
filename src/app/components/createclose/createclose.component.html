@@ -1,0 +1,14 @@
+<!--
+Create & Close Components Template
+Areas: Create, Close
+-->
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<button type="button" class="btn btn-block" [disabled] = "isCreate">Create {{where}}</button>
+	</div>
+</div>
+<div class="row gutter-10" *ngIf = "ifClose">
+	<div class="col-xs-12">
+		<button type="button" class="btn btn-block">Close</button>
+	</div>
+</div>

@@ -1,0 +1,159 @@
+<div class="dlg-container">
+	<h1 class="title">{{ title }}</h1>
+	<button class="toggle-desc"><span class="fa fa-question-circle"></span></button>
+	<div class="description">
+	</div>
+	<div class="content">
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Team Owner is {{teamowner}}</label>
+				</div>
+			</div>
+		</div>
+		<comp-name [where] = "indicator"></comp-name>
+		<comp-address [where] = "indicator"></comp-address>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Team Notes</label>
+					<textarea></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Team iFrame</label>
+					<input type="text" [disabled]="true" class="form-control offset-right-50" [value]="teamiframe" />
+					<button class="right-50">Copy<i class="fa fa-link"></i></button>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Facebook Page</label>
+					<input type="url" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Twitter username</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Add Logo</label>
+					<input type="file" id="add-logo" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Add Heading Picture</label>
+					<input type="file" id="add-heading" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<comp-sports></comp-sports>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>League Type</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label>Age Group</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label>Roster Size</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="form-group">
+					<label>Gender</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Add Team Picture</label>
+					<input type="file" id="myFile"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Uniform information</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Current Team</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Open Spaces</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-12">
+				<div class="form-group">
+					<label>Home Field</label>
+				</div>
+			</div>
+		</div>
+		<div class="row gutter-10">
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>City</label>
+					<input type="text" class="form-control"/>
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="form-group">
+					<label>Field</label>
+					<select type="number" class="form-control" [(ngModel)]="selSubSport" (ngModelChange)="getSubSport($event)" [disabled] = "ifSubSport">
+						<option [value]="">{{emptyLabel}}</option>
+						<option *ngFor="let subSport of subSports" [value]="subSport.sport_name">{{subSport.sport_name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<comp-cac [where] = "'a ' +indicator"></comp-cac>
+	</div>
+</div>

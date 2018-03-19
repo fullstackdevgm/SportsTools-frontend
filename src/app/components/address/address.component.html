@@ -1,0 +1,117 @@
+<!--
+Address Components Template
+Areas: Address 1, Address 2, City, County/District, Country, Zip/Postal, State, Time Zone, Phone_1, Phone_2, Email, Website Address, SportsTools Address
+-->
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<div class="form-group">
+			<label>Address 1</label>
+			<input type="text" class="form-control"/>
+		</div>
+	</div>
+</div>
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<div class="form-group">
+			<label>Address 2</label>
+			<input type="text" class="form-control"/>
+		</div>
+	</div>
+</div>
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<div class="form-group">
+			<label>City</label>
+			<input type="text" class="form-control"/>
+		</div>
+	</div>
+</div>
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<div class="form-group">
+			<label>County / District</label>
+			<input type="text" class="form-control"/>
+		</div>
+	</div>
+</div>
+<div class="row gutter-10">
+	<div class="col-xs-12">
+		<div class="form-group">
+			<label>Country</label>
+			<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+				<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+			</select>
+		</div>
+	</div>
+</div>
+<div class="row gutter-10">
+	<div class="col-xs-4">
+		<div class="form-group">
+			<label>Zip / Postal</label>
+			<input type="text" class="form-control"/>
+		</div>
+	</div>
+	<div class="col-xs-8">
+		<div class="form-group">
+			<label>State</label>
+			<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+				<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+			</select>
+		</div>
+	</div>
+</div>
+<div *ngIf="show_other">
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Time Zone</label>
+				<select type="number" class="form-control" [(ngModel)]="selSport" (ngModelChange)="getSport($event)">
+					<option *ngFor="let sport of sports" [value]="sport.sport_name">{{sport.sport_name}}</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Phone_1</label>
+				<input type="tel" class="form-control"/>
+			</div>
+		</div>
+	</div>
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Phone_2</label>
+				<input type="tel" class="form-control"/>
+			</div>
+		</div>
+	</div>
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Email</label>
+				<input type="email" class="form-control"/>
+			</div>
+		</div>
+	</div>
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>Website Address</label>
+				<input type="url" class="form-control"/>
+			</div>
+		</div>
+	</div>
+	<div class="row gutter-10">
+		<div class="col-xs-12">
+			<div class="form-group">
+				<label>SportsTools Address</label>
+				<div class="row gutter-10">
+					<div class="col-xs-6 form-text">&nbsp;&nbsp;&nbsp;www.sportstools.com/</div>
+					<div class="col-xs-6"><input type="url" class="form-control"/></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
